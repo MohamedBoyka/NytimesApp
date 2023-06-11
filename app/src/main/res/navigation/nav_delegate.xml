@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_delegate"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.boyka.nytimesapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_detailsragment"
+            app:destination="@id/detailsragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsragment"
+        android:name="com.boyka.nytimesapp.ui.DetailsFragment"
+        android:label="fragment_detailsragment"
+        tools:layout="@layout/fragment_detailsragment" >
+
+        <argument
+            android:name="argNytDsection"
+            app:argType="string"/>
+
+        <argument
+            android:name="argAbstract"
+            app:argType="string"/>
+
+        <argument
+            android:name="argAdxKeywords"
+            app:argType="string"/>
+
+
+    </fragment>
+
+
+</navigation>
